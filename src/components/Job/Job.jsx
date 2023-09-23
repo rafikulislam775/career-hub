@@ -1,7 +1,9 @@
 import { IoLocation } from "react-icons/io5";
 import { BsCurrencyYen } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
 const Job = ({ job }) => {
   const {
+    id,
     logo,
     job_title,
     company_name,
@@ -38,7 +40,9 @@ const Job = ({ job }) => {
             </h2>
           </div>
           <div className="card-actions">
-            <button className="btn btn-primary">View Details</button>
+            <NavLink to={`/job/${id}`}>
+              <button className="btn btn-primary">View Details</button>
+            </NavLink>
           </div>
         </div>
       </div>

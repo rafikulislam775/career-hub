@@ -21,7 +21,8 @@ const FeaturedJobs = () => {
           <Job key={job.id} job={job}></Job>
         ))}
       </div>
-      <div className={dataLength ===jobs.length && "hidden"}>
+      {/* <div className={dataLength === jobs.length && "hidden"}> */}
+      <div className={dataLength === jobs.length ? "hidden" : ""}>
         <button
           onClick={() => setDataLength(jobs.length)}
           className="btn btn-primary"
